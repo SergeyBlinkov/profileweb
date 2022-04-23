@@ -1,0 +1,41 @@
+
+
+
+
+
+.gallery_block__transition-enter {
+  opacity: 0 !important;
+}
+.gallery_block__transition-enter-active {
+  transition: opacity 1s;
+  opacity: 1 !important;
+}
+.gallery_block__transition-enter-done {
+  opacity: 1 !important;
+  transition: opacity 1s;
+}
+.gallery_block__transition-exit {
+  opacity: 0 !important;
+}
+.gallery_block__transition-exit-active {
+  transition: opacity 1s;
+  opacity: 0 !important;
+}
+.gallery_block__transition-exit-done {
+  opacity: 0 !important;
+}
+
+.ModalWindowCSSTransition-enter {
+  opacity: 0;
+}
+.ModalWindowCSSTransition-enter-active {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.ModalWindowCSSTransition-exit {
+  opacity: 1;
+}
+.ModalWindowCSSTransition-exit-active {
+  opacity: 0;
+  transition: opacity 1s;
+}

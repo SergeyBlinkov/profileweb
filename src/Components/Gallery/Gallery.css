@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@700&family=Lobster&family=Playfair+Display:wght@500&family=Raleway:wght@500&display=swap");
+.loader {
+  position: absolute;
+}
+
+.gallery {
+  padding-top: 10px;
+  height: 92vh;
+  display: grid;
+  justify-items: center;
+  grid-gap: 10px;
+  grid-template-columns: 100vw 100vw;
+  overflow: hidden;
+  grid-template-rows: 1fr 5vh;
+}
+.gallery .gallery_block {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  transition: 1s all ease-in-out;
+  grid-gap: 15px;
+}
+.gallery .gallery_block .gallery_block__items {
+  transition: 1s all ease-in-out;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gallery .gallery_block .gallery_block__items img {
+  position: absolute;
+  box-shadow: 0 0 13px #000;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.gallery .gallery_block .gallery_block__items .gallery_block__more {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.gallery .gallery_block .gallery_block__items .gallery_block__more:hover {
+  opacity: 1;
+}
+.gallery .gallery_block .gallery_block__items .gallery_block__more button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-transform: lowercase;
+  width: 45%;
+  height: 12%;
+  letter-spacing: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  font-family: "Playfair Display", serif;
+}
+.gallery .gallery_block .gallery_block__items .gallery_block__more button:hover {
+  border-color: transparent;
+  transition: color 0.3s, border 0.5s;
+  background: rgba(0, 0, 0, 0.3);
+}
+.gallery .gallery_button {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 4.5vh;
+  grid-gap: 10px;
+  grid-column: 1;
+  justify-self: center;
+  align-items: center;
+}
+.gallery .gallery_button button {
+  position: relative;
+  font-size: 18px;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  border-radius: 3px;
+  margin: 0 10px;
+  padding: 23px 33px;
+  border: 1px solid transparent;
+}
+.gallery .gallery_button button:active {
+  transform: translateY(3px);
+}
+.gallery .gallery_button button::after, .gallery .gallery_button button::before {
+  border-radius: 3px;
+}
+.gallery .gallery_button .material-bubble {
+  background-color: transparent;
+  color: #1b1b20;
+  overflow: hidden;
+  box-shadow: none;
+  line-height: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 18px;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  border-radius: 3px;
+  margin: 0 10px;
+  padding: 23px 33px;
+  border: 1px solid transparent;
+}
+.gallery .gallery_button .material-bubble:hover {
+  color: #e6e6e6;
+}
+.gallery .gallery_button .material-bubble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #1b1b20;
+  transition: opacity 0.3s, border 0.3s;
+}
+.gallery .gallery_button .material-bubble:hover::before {
+  opacity: 0;
+}
+.gallery .gallery_button .material-bubble::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #494958;
+  border-color: transparent;
+  border-radius: 50%;
+  transform: translate(0, 0) scale(0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 1s, opacity 0.3s, background-color 0.3s;
+}
+.gallery .gallery_button .material-bubble:hover::after {
+  opacity: 1;
+  transform: scale(2.5) translate(0, 0);
+}
+
+.galleryModal_isShow {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 5%;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid black;
+  z-index: 5;
+  background: rgb(226, 226, 226);
+  display: grid;
+  grid-template-rows: minmax(20vh, 90vh) max-content;
+}
+.galleryModal_isShow .carousel-inner {
+  height: 100%;
+}
+.galleryModal_isShow .carousel-inner .carousel-item {
+  height: 100%;
+}
+.galleryModal_isShow .carousel-inner .active {
+  height: 100%;
+}
+.galleryModal_isShow .x-mark {
+  position: absolute;
+  right: 2%;
+  top: 3%;
+  cursor: pointer;
+  z-index: 10;
+}
+.galleryModal_isShow p {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+.galleryModal_isShow img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  height: 100%;
+}
+
+/*# sourceMappingURL=Gallery.css.map */
