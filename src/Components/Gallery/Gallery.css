@@ -169,9 +169,21 @@
 .galleryModal_isShow .x-mark {
   position: absolute;
   right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  background: #fff;
+  border-radius: 50%;
+  height: 30px;
   top: 3%;
   cursor: pointer;
   z-index: 10;
+  transition: background-color 0.5s ease-in-out;
+}
+.galleryModal_isShow .x-mark:hover {
+  transition: background-color 0.5s ease-in-out;
+  background: #4f4f4f;
 }
 .galleryModal_isShow p {
   font-family: "Raleway", sans-serif;

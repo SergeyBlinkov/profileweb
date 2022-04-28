@@ -4,6 +4,7 @@ import {SendMail} from "./SendContact";
 import {CSSTransition} from "react-transition-group";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import AboutFeatures from "./AboutFeatures";
+import myPict from '../../pictures/mypic.jpg'
 
 
 const About = () => {
@@ -22,7 +23,7 @@ const About = () => {
                 </div>
             </CSSTransition>
         <div className={'about_profile'}>
-            <img src={'https://hhcdn.ru/photo/649033375.jpeg?t=1650637554&h=52S-aJYtDly0RerSIG6aDQ'} width={'200px'} height={'200px'} alt={'mypic'}/>
+            <img src={myPict} width={'200px'} height={'200px'} alt={'mypic'}/>
             <div className={'about-profile_info'}>
                 <ul>
                     <li>Имя:</li>

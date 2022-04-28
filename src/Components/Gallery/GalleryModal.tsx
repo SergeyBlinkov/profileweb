@@ -29,7 +29,7 @@ function GalleryModal ({ModalData,cb}:Props) {
         unmountOnExit
         mountOnEnter
     >
-        <div className={'darkBackground'} ref={nodeRef}><div className={'galleryModal_isShow'}><i onClick={handleChange} className="fa-solid fa-xmark fa-2xl x-mark"></i>
+        <div className={'darkBackground'} ref={nodeRef}><div className={'galleryModal_isShow'}><div className={'x-mark'} onClick={handleChange}><i className="fa-solid fa-xmark fa-2xl"></i></div>
         <Carousel fade className={'galleryModal_Carousel'}>
             {ModalData.data.photoUrl.map((data) => {
                 return <Carousel.Item key={data}>
