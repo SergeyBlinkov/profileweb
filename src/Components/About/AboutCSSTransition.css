@@ -1,0 +1,19 @@
+.sendEmail-enter {
+  opacity: 0 !important;
+}
+
+.sendEmail-enter-active {
+  opacity: 1 !important;
+  transition: opacity 0.8s;
+}
+
+.sendEmail-exit {
+  opacity: 1 !important;
+}
+
+.sendEmail-exit-active {
+  transition: opacity 0.8s;
+  opacity: 0 !important;
+}
+
+/*# sourceMappingURL=AboutCSSTransition.css.map */

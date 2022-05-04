@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@700&family=Lobster&family=Playfair+Display:wght@500&family=Raleway:wght@500&display=swap');
+.loader {
+  position: absolute;
+}
+.gallery {
+  padding-top: 10px;
+  height: 92vh;
+  display: grid;
+  justify-items: center;
+  grid-gap: 10px;
+  grid-template-columns: 100vw 100vw;
+  overflow: hidden;
+  grid-template-rows: 1fr 5vh;
+ .gallery_block{
+   width: 90vw;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-items: center;
+   transition: 1s all ease-in-out;
+   grid-gap: 15px;
+   .gallery_block__items{
+     transition: 1s all ease-in-out;
+     position: relative;
+     width: 100%;
+     height:100%;
+     img {
+       position: absolute;
+       box-shadow: 0 0 13px #000;
+       border-radius: 5px;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+     }
+     .gallery_block__more {
+       width: 100%;
+       display: flex;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.4);
+       align-items: center;
+       justify-content: center;
+       z-index: 1;
+       opacity: 0;
+       transition: opacity 0.5s;
+       &:hover {
+         opacity: 1;
+       }
+       button {
+         border: 1px solid rgba(255, 255, 255, 0.2);
+         text-transform: lowercase;
+         width: 45%;
+         height: 12%;
+         letter-spacing: 4px;
+         background: rgba(0, 0, 0, 0.1);
+         font-family: 'Playfair Display', serif;
+         &:hover {
+           border-color: transparent;
+           transition: color 0.3s, border 0.5s;
+           background: rgba(0, 0, 0, 0.3);
+         }
+       }
+     }
+   }
+
+ }
+  .gallery_button {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 4.5vh;
+    grid-gap: 10px;
+    grid-column: 1;
+    justify-self: center;
+    align-items: center;
+    button {
+      position: relative;
+      font-size: 18px;
+      transition: color 0.5s, transform 0.2s, background-color 0.2s;
+      outline: none;
+      border-radius: 3px;
+      margin: 0 10px;
+      padding: 23px 33px;
+      border: 1px solid transparent;
+      &:active{
+        transform: translateY(3px);}
+      &::after,
+      &::before {
+        border-radius: 3px
+      }
+    }
+    .material-bubble {
+      background-color: transparent;
+      color: darken(rgb(50,50,60), 10%);
+      overflow: hidden;
+      box-shadow: none;
+      line-height: 0;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      position: relative;
+      font-size: 18px;
+      transition: color 0.5s, transform 0.2s, background-color 0.2s;
+      outline: none;
+      border-radius: 3px;
+      margin: 0 10px;
+      padding: 23px 33px;
+      border: 1px solid transparent;
+
+      &:hover {
+        color: darken(white, 10%);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid darken(rgb(50, 50, 60), 10%);
+        transition: opacity 0.3s, border 0.3s;
+
+      }
+      &:hover::before {
+        opacity: 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: lighten(rgb(50,50,60), 10%);
+        border-color: transparent;
+        border-radius: 50%;
+        transform: translate(0, 0) scale(0.1);
+        opacity: 0;
+        z-index: -1;
+        transition: transform 1s, opacity 0.3s, background-color 0.3s;
+      }
+      &:hover::after{
+        opacity: 1;
+        transform: scale(2.5) translate(0, 0);
+      }
+    }
+  }
+}
+
+  .galleryModal_isShow{
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 5%;
+    bottom: 5%;
+    height: auto;
+    border-radius: 15px;
+    border:1px solid black;
+    z-index: 5;
+    background: rgb(226, 226, 226);
+    display: grid;
+    grid-template-rows: minmax(20vh,90vh) max-content;
+      .carousel-inner {
+        height: 100%;
+        .carousel-item {
+          height: 100%;
+        }
+        .active {
+          height: 100%;
+        }
+    }
+    .x-mark{
+      position: absolute;
+      right: 2%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      background: #fff;
+      border-radius: 50%;
+      height: 30px;
+      top: 3%;
+      cursor: pointer;
+      z-index: 10;
+      transition: background-color 0.5s ease-in-out;
+      &:hover {
+        transition: background-color 0.5s ease-in-out;
+        background: #4f4f4f;
+      }
+    }
+    p {
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+    }
+    img{
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+      height: 100%;
+    }
+}
